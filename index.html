@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="https://kit.fontawesome.com/e1f1434f41.js" crossorigin="anonymous"></script>
+   
+</head>
+
+  
+<body>
+
+  <div id="head-menu-parent">
+    <div id="head-menu">
+      <div class="dropdown">
+        <button id="menu"><i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="dropdown-content">
+          <select  multiple>
+            <option value="all">All</option>
+            <option value="complete">Completed</option>
+            <option value="incomplete">Incompleted</option>
+            
+          </select>
+          <!-- <a href="#" id="all">All</a>
+          <a href="#" id="completd">Completed</a>
+          <a href="#" id="incompleted">Incompleted</a> -->
+        </div>
+      </div>
+      
+
+      <h1> My ToDo List </h1>
+    </div>
+  </div>
+  <div id="task-card-parent">
+
+    <div id="task-card">
+      <ul id="task-card-ul">
+
+      </ul>
+    
+       <!-- <li id="task">
+  <input type="checkbox" id="task-checkbox">
+  <span id="task-text">text</span>
+</li> -->
+    </div>
+    <button id="add-btn">
+      <h5>+New Task</h5>
+    </button>
+    <!-- <div class="take-input">
+  <input type="text" id="add-btn-inp">
+  <button><i class="fas fa-plus-circle"></i></button>
+</div> -->
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
