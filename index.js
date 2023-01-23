@@ -10,7 +10,7 @@ btn.addEventListener("click", getInput);
 
 const inputDiv = document.createElement('div');
 inputDiv.id = 'take-input';
-document.getElementById("task-card-parent").appendChild(inputDiv);
+document.getElementById("task-card-parent").append(inputDiv)
 
 const inpField = document.createElement("input");
 inpField.setAttribute('type', 'text');
@@ -106,14 +106,14 @@ function check(ele) {
 const filterBtn = document.getElementById('menu');
 
 filterBtn.addEventListener('click', (e) => {
-   
+
     const todos = document.getElementById('task-card-ul').children;
     for (let index = 0; index < todos.length; index++) {
         const element = todos[index];
-        if(element.classList.contains('incomplete')){
-            element.style.display='none';
+        if (element.classList.contains('incomplete')) {
+            element.style.display = 'none';
         }
-        
+
     }
 
 
@@ -159,7 +159,7 @@ filterBtn.addEventListener('click', (e) => {
 //     case 'all':
 
 //         todo.style.display="flex ";
-//         break;
+//         break;̥
 
 //     case 'complete':
 
