@@ -103,81 +103,40 @@ function check(ele) {
 
 
 //filtering todo logic
-const filterBtn = document.getElementById('menu');
 
-filterBtn.addEventListener('click', (e) => {
 
+function filter(ele) {
     const todos = document.getElementById('task-card-ul').children;
     for (let index = 0; index < todos.length; index++) {
         const element = todos[index];
-        if (element.classList.contains('incomplete')) {
-            element.style.display = 'none';
+        switch(ele.value)
+        
+{
+    case 'all':
+
+        element.style.display="flex";
+        break;
+
+    case 'complete':
+
+    if(element.classList.contains('completed')){
+        element.style.display='flex';
+    }
+    else{
+        element.style.display='none';
+    }
+    break;
+
+    case 'incomplete':
+        if(!element.classList.contains('completed')){
+            element.style.display='flex';
         }
+        else{
+            element.style.display='none';
+        }
+        break;
+
+}
 
     }
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-//logic for filtering todo: daddy btayenge
-
-
-//delete and complete logic
-
-// function deleteCheck(e){
-// const item =e.target;
-
-// //delete
-// if(item.classList[0]==='tarsh-btn'){
-//  item.parentElement.remove();
-// }
-// //complete
-// if(item.classList[0]==='task-checkbox'){
-//     item.parentElement.toggel('completed');
-//    }
-// }
-
-
-
-
-
-//spare code
-
-// switch(e.target.value)
-// {
-//     case 'all':
-
-//         todo.style.display="flex ";
-//         break;̥
-
-//     case 'complete':
-
-//     if(todo.classList.contains('completed')){
-//         todo.style.display='flex';
-//     }
-//     else{
-//         todo.style.display='none';
-//     }
-//     break;
-
-//     case 'incomplete':
-//         if(!todo.classList.contains('completed')){
-//             todo.style.display='flex';
-//         }
-//         else{
-//             todo.style.display='none';
-//         }
-//         break;
-
-// }
+}
